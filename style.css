@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
-
+@import url('https://fonts.cdnfonts.com/css/roslindale?styles=147542');
 @media (max-width: 800px) {
   .description {
       left: 0;
@@ -48,7 +48,207 @@
 .logo{
     background-color: white;
 }
+/*  */
+/* RESET */
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+/* BASE STYLES */
+body {
+  background-color: #e8f0f7;
+  font-family: 'Inter', sans-serif;
+  /* min-height: 500vh; */
+}
+
+/* NORMAL STYLES */
+.header {
+  z-index: 10;
+  top:0;
+  position: fixed;
+  width: 100%;
+}
+
+.top-bar {
+  background-color: rgb(39, 44, 51);
+}
+
+.top-bar__content {
+  height: 30px;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.icon {
+  margin-right: 3px;
+  color: rgba(255, 255, 255, 0.17);
+}
+
+.bottom-bar {
+  background-color: #fff;
+}
+
+.bottom-bar__content {
+  min-height: 60px;
+  /* max-width: 1200px; */
+  padding: 0 30px;
+  margin: 0 50px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 11px;
+}
+
+.logo {
+  vertical-align: middle;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.logo__img {
+  height: 40px;
+}
+
+.logo__text {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  transition: all 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 40px;
+  margin-bottom: 0.6rem;
+}
+
+.nav__link {
+  color: #000000;
+  transition: all 0.2s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: orange;
+}
+
+.Navbtn {
+  margin-top: 12px;
+  color: #000000;
+  background-color: #ff5e00;
+  padding: 8px 20px;
+  border-radius: 1000px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* .Navbtn:hover {
+  background-color:  rgb(28, 128, 228);
+} */
+.Navbtn:hover {
+  background-color: rgb(241, 160, 10);
+  color: #fff;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  height: 2px;
+  width: 27px;
+  background-color: #060202;
+  margin: 5px 0;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+/* For JS */
+.nav--open {
+  left: 50% !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 650px) {
+  .nav {
+    position: fixed;
+    top: 90px;
+    left: -100%;
+    transform: translateX(-50%);
+    background-color: rgb(19, 22, 26);
+    width: 100%;
+    padding: 10px 0 25px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .Navbtn {
+    font-size: 11px;
+    padding: 7px 17px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  .top-bar__content {
+    font-size: 10px;
+  }
+}
+/*  */
 .navbar{
     display: flex;
     height: 60px;
@@ -82,7 +282,7 @@
 }
 
 
-li a {
+/* li a {
     display: block;
     color: #333;
     text-align: center;
@@ -99,7 +299,7 @@ li a:hover:not(.active) {
 .active {
     background-color: #f07c1e;
     border-radius: 10px 10px 10px 10px;
-}
+} */
 
 .topleft{
     width: 50%;
@@ -114,7 +314,10 @@ li a:hover:not(.active) {
 }
 
 .section2{
-  height: 100vh;
+  margin-top: 10px;
+  height: 35vh;
+  background: linear-gradient(270deg, #ffffff, #f4bea3);
+
 }
 
 .AboutUsSection1{
@@ -131,7 +334,7 @@ li a:hover:not(.active) {
 
 }
 
-.header {
+.hader1 {
   background-image: url('Images/computer-8598079_1280.jpg') ;
   background-size: cover;
   background-position: center;
@@ -177,14 +380,14 @@ li a:hover:not(.active) {
     color: #f07c1e;
   }
 
-  .logo {
+  /* .logo {
     background: url(Images/logo.JPG) no-repeat left;
     background-size: 300px 300px;
     height: 100px;
     position: relative;
 
-  }
-
+  } */
+/* 
   .contact-image {
     background: url(Images/logo.JPG) no-repeat left;
     background-size: 300px 300px;
@@ -192,16 +395,17 @@ li a:hover:not(.active) {
     position: relative;
     width: 500px;
 
-  }
+  } */
 
   .main{
     color: black;
   }
 
   .features {
-    margin: 4em auto;
+    margin: 2em auto;
     padding: 1em;
     position: relative;
+    margin-top: 45px;
   }
   .feature-title {
     color: #333;
@@ -232,13 +436,6 @@ li a:hover:not(.active) {
     height: 250px;
     position: relative;
     margin-left: 100px;
-  }
-
-  .features img {
-    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    margin-bottom: 16px;
   }
 
   .page-footer {
@@ -399,6 +596,7 @@ li a:hover:not(.active) {
   border-radius: 25px;
   margin-top: 15px;
   transition: 0.3s ease;
+  margin-bottom: 10px;
 }
 .AboutContent .readMore:hover{
   /* background-color: #4caf50; */
@@ -425,6 +623,7 @@ li a:hover:not(.active) {
   overflow: hidden;
   padding: 1%;
   margin: 2%;
+  margin-top: 25px;
 }
 .VisionContainer{
   display: flex;
@@ -439,6 +638,9 @@ li a:hover:not(.active) {
   margin: 0px 25px;
 }
 .VisionContent h2{
+  font-size: 2.625rem;
+  font-family: Apple Chancery, cursive ;
+  text-decoration: underline;
   font-size: 40px;
   margin-bottom: 20px;
 
@@ -499,6 +701,10 @@ li a:hover:not(.active) {
     padding: 0px;
     font-size: 12px;
   }
+  .section2{
+    height: 100%;
+  }
+  
 }
 .counter-Up .counterTitle{
   display: flex;
@@ -506,9 +712,9 @@ li a:hover:not(.active) {
   text-align: center;
   justify-content: center;
   padding: 15px 0px 15px 0px;
-  font-weight: 800;
+  font-weight: 600;
   font-family: cursive;
-  font-size: xx-large;
+  font-size: 30px;
 
 }
 .counter-Up{
@@ -516,7 +722,6 @@ li a:hover:not(.active) {
   min-height: 45vh;
   align-items: center;
   /* display: flex; */
-  padding: 0 50px;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -537,7 +742,7 @@ li a:hover:not(.active) {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-
+  padding: 0 50px;
 }
 
 .content .box{
@@ -550,6 +755,35 @@ li a:hover:not(.active) {
   flex-direction: column;
   color: #301c06;
   border-radius: 5px;
+}
+.features .icon{
+  font-size: 45px;
+  color: #666;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #f65828;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f65828;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .content .box .icon{
   font-size: 45px;
@@ -569,9 +803,9 @@ li a:hover:not(.active) {
 }
 
 @media (max-width: 1036px){
-  .counter-Up{
+  /* .counter-Up{
     padding: 50px 50px 0px 50px;
-  }
+  } */
   .content .box{
     width: calc(50% - 30px);
     margin-bottom: 50px;
@@ -601,9 +835,7 @@ li a:hover:not(.active) {
   padding-left: 15px;
   padding-right: 15px;
 }
-.reviewSection .reviewheading{
-  /* color: #fff; */
-}
+
 .reviewSection .reviewbox-container{
   display: flex;
   justify-content: center;
@@ -652,7 +884,7 @@ li a:hover:not(.active) {
 }
 .reviewheading{
   text-align: center;
-  font-size: 3rem;
+  font-size: 40px;
    padding: 1rem; 
   padding-top: 2rem;
   color: #080303;
