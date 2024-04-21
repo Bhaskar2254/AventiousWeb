@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url('https://fonts.cdnfonts.com/css/roslindale?styles=147542');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @media (max-width: 800px) {
   .description {
       left: 0;
@@ -30,6 +31,23 @@
 
   .contact-right{
     display: none;
+  }
+  .vision{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  .vision .VisionContainer{
+    flex-direction: column;
+    padding: 5%;
+    
+  }
+  .VisionContainer .VisionContent{
+    width: 100%;
+  }
+  .vision .VisionContainer .visionImage{
+    width: 100%;
+    order: -1;
   }
 }
 
@@ -112,11 +130,12 @@ body {
   min-height: 60px;
   /* max-width: 1200px; */
   padding: 0 30px;
-  margin: 0 50px;  
+  margin: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 11px;
+  border-bottom:  1px solid;
 }
 
 .logo {
@@ -161,7 +180,7 @@ body {
 .Navbtn {
   margin-top: 12px;
   color: #000000;
-  background-color: #ff5e00;
+  background-color: #ff7a2d;
   padding: 8px 20px;
   border-radius: 1000px;
   text-transform: uppercase;
@@ -187,7 +206,7 @@ body {
 .bar {
   height: 2px;
   width: 27px;
-  background-color: #060202;
+  background-color: #ff7a2d;
   margin: 5px 0;
   opacity: 0.8;
   transition: all 0.3s ease-in-out;
@@ -387,7 +406,7 @@ li a:hover:not(.active) {
     position: relative;
 
   } */
-/* 
+/*
   .contact-image {
     background: url(Images/logo.JPG) no-repeat left;
     background-size: 300px 300px;
@@ -402,10 +421,10 @@ li a:hover:not(.active) {
   }
 
   .features {
-    margin: 2em auto;
+    /* margin: 2em auto;
     padding: 1em;
     position: relative;
-    margin-top: 45px;
+    margin-top: 45px; */
   }
   .feature-title {
     color: #333;
@@ -604,9 +623,9 @@ li a:hover:not(.active) {
 }
 .ContactUs{
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 12px;
   /* background-color: #ed5454e6; */
-  background: linear-gradient(270deg, #f30017, #e6885c);
+  background: linear-gradient(270deg, #dac817, #e6885c);
   color: #fff;
   font-size: 19px;
   text-decoration: none;
@@ -621,16 +640,19 @@ li a:hover:not(.active) {
  .vision{
   background-color: #fcfcfc;
   overflow: hidden;
-  padding: 1%;
-  margin: 2%;
+
+  /* margin: 2%; */
   margin-top: 25px;
 }
 .VisionContainer{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: 65px auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2.5rem;
 }
 .VisionContent{
   flex: 1;
@@ -639,17 +661,18 @@ li a:hover:not(.active) {
 }
 .VisionContent h2{
   font-size: 2.625rem;
-  font-family: Apple Chancery, cursive ;
-  text-decoration: underline;
-  font-size: 40px;
+  /* font-family: Apple Chancery, cursive ; */
+  /* text-decoration: underline; */
+  font-size: 25px;
   margin-bottom: 20px;
+  margin-top:5px
 
 }
 .VisionContent p{
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   margin-bottom: 25px;
-  
+
 }
 .visionImage{
   flex: 1;
@@ -658,8 +681,8 @@ li a:hover:not(.active) {
 }
 .visionImage img{
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
+  border-radius: 20px;
 }
 /*
 .visionDiv{
@@ -704,7 +727,10 @@ li a:hover:not(.active) {
   .section2{
     height: 100%;
   }
-  
+  .contact-left-title{
+    display: none;
+  }
+
 }
 .counter-Up .counterTitle{
   display: flex;
@@ -866,7 +892,7 @@ li a:hover:not(.active) {
 .reviewSection .reviewbox-container .reviewbox h3{
   text-align: end;
   color: #5655b4de;
-} 
+}
 .reviewSection .reviewbox-container .reviewbox span{
   text-align: end;
   display: block;
@@ -885,21 +911,171 @@ li a:hover:not(.active) {
 .reviewheading{
   text-align: center;
   font-size: 40px;
-   padding: 1rem; 
+   padding: 1rem;
   padding-top: 2rem;
   color: #080303;
 }
 .reviewheading span{
   color: #3a44c9de;
-} 
+}
 
+/* servies */
+.Services{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin: 75px auto;
+  text-align: center;
+  padding-top:30px;
+}
+.cardService{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 20px;
+  padding: 20px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 10px 22px;
+}
+.cardService .IconService{
+  font-size: 55px;
+  margin-bottom: 10px;
+  color: #d71597;
 
+}
+.cardService h2{
+  font-size: 22px;
+  color: #000;
+  margin: 20px;
+  margin-top: 5px;
 
+}
+.cardService p{
 
+  font-size: 15px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.cardService:hover{
+  background-color: #e8dad5;
+  transition: 0.4s ease;
+}
+.Servicesbutton{
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #ff8a09;
+  padding: 8px 12px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.Servicesbutton:hover{
+  background-color: #eec89e;
+  transition: 0.4s ease;
+}
+@media screen and (max-width: 940px){
+  .Services{
+    display: flex;
+    flex-direction: column;
+  }
+  .cardService{
+    width: 85%;
+    display: flex;
+    margin: 20px auto;
+    padding:20px;
+  }
+}
+.headerGap{
+  margin-top: 88px;
+}  
+/* .AllServicesSection{
+  justify-content: center;
+  align-items: center;
+}
 
+.cardService img{
+  height: 500px;
+  width: 350px;
+}
+.containerService{
+  display: flex;
+} */
+.ctm-col-md-12{
+  text-align: center;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+.MassTortCover{
+  margin-top: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url(Images/MassTortCover1.jpg);
+  overflow: hidden;
+}
+.MassTortCover:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 67%, rgba(255, 255, 255, .1) 72%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, 1) 101%) repeat scroll 0 0;
+}
+.MassTortTitle h1{
+  font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 80px;
+}
+.MassTortTitle p{
+  font-size: 46.4px;
+    color: #FFF;
+    margin-bottom: 25px;
+}
+.desc{
+  line-height: 29px;
+  font-size: 20px;
+  color: #FFF;
+  width: 960px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
-
-
+@media screen and (max-width: 940px) {
+  .desc {
+    line-height: 22.4px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+ .MassTortCover .ctm-col-md-12{
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 110px;
+ }
+ .MassTortTitle p{
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+ }
+ .MassTortCover{
+  margin-top: 00px;
+ }
+}
 
 
 
