@@ -3,6 +3,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url('https://fonts.cdnfonts.com/css/roslindale?styles=147542');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/euclid-circular-b');
 @media (max-width: 800px) {
   .description {
       left: 0;
@@ -920,13 +921,28 @@ li a:hover:not(.active) {
 }
 
 /* servies */
+section.AllServicesSection {
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
 .Services{
-  width: 85%;
+   /* width: 85%;
   display: flex;
   justify-content: center;
   margin: 75px auto;
   text-align: center;
-  padding-top:30px;
+  padding-top:30px;  */
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  grid-column-gap: 1.6rem;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 1fr;
+  grid-auto-columns: minmax(0, 1fr);
+  width: 85%;
+  display: grid;
+  margin: 50px 80px;
 }
 .cardService{
   width:100%;
@@ -964,7 +980,7 @@ li a:hover:not(.active) {
   font-style: italic;
 }
 .cardService:hover{
-  background-color: #e8dad5;
+  background-color: #f7ece8;
   transition: 0.4s ease;
 }
 .Servicesbutton{
@@ -983,6 +999,8 @@ li a:hover:not(.active) {
   .Services{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0px;
   }
   .cardService{
     width: 85%;
@@ -1014,6 +1032,24 @@ li a:hover:not(.active) {
   padding-top: 150px;
   padding-bottom: 50px;
 }
+.massTortInfo{
+  padding: 5px 40px;
+}
+.massTortInfo h3{
+  border-bottom: 1.5px solid;
+    border-image: linear-gradient(to right, #f86c00, #f86c00, transparent) 1;
+    font-size: 24px;
+    /* line-height: 31px; */
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-family: serif, sans-serif;
+    font-weight: 550;
+}
+.massTortInfo p{
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
 .MassTortCover{
   margin-top: 50px;
   background-repeat: no-repeat;
@@ -1075,6 +1111,13 @@ li a:hover:not(.active) {
  .MassTortCover{
   margin-top: 00px;
  }
+ .massTortInfo h3{
+  font-size: 20px;
+  padding-left: 0px;
+ }
+ .massTortInfo p{
+  font-size: 15px;
+ }
 }
 
 
@@ -1083,3 +1126,56 @@ li a:hover:not(.active) {
   display: flex;
 
 } */
+.FAQSection h1{
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #f86c00, transparent) 1;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
